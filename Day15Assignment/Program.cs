@@ -5,7 +5,7 @@ namespace Day15Assignment
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("enter choice\n1.find ferquency of word\n2.find ferquency of phrase\n3.Remove word\n4.creat BST");
+            Console.WriteLine("enter choice\n1.find ferquency of word\n2.find ferquency of phrase\n3.Remove word\n4.creat BST\n5.creat BST For Given");
             int opt =Convert.ToInt32 ( Console.ReadLine());
 
             switch(opt)
@@ -85,14 +85,34 @@ namespace Day15Assignment
                     Console.WriteLine("Choose a appropriate option");
                     break;
                 case 4:
+                    BinarySearchTree<int> binarySearch1 = new BinarySearchTree<int>(56);
+                    binarySearch1.Insert(30);
+                    binarySearch1.Insert(70);
+
+
+                    binarySearch1.Display();
+                    binarySearch1.GetSize();
+                    break;
+              
+                case 5:
                     BinarySearchTree<int> binarySearch = new BinarySearchTree<int>(56);
                     binarySearch.Insert(30);
                     binarySearch.Insert(70);
-
-
+                    binarySearch.Insert(22);
+                    binarySearch.Insert(40);
+                    binarySearch.Insert(60);
+                    binarySearch.Insert(95);
+                    binarySearch.Insert(11);
+                    binarySearch.Insert(65);
+                    binarySearch.Insert(3);
+                    binarySearch.Insert(16);
+                    binarySearch.Insert(63);
+                    binarySearch.Insert(67);
                     binarySearch.Display();
                     binarySearch.GetSize();
+
                     break;
+                    
 
 
 
