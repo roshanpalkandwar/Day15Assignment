@@ -5,7 +5,7 @@ namespace Day15Assignment
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("enter choice\n1.find ferquency of word");
+            Console.WriteLine("enter choice\n1.find ferquency of word\n2.find ferquency of phrase");
             int opt =Convert.ToInt32 ( Console.ReadLine());
 
             switch(opt)
@@ -30,6 +30,29 @@ namespace Day15Assignment
                     Console.WriteLine("3th Index Value: " + hash3);
                     Console.WriteLine("2th Index Value: " + hash2);
                     break;
+                    case 2:
+                    MyMapNode<string, string> hash1 = new MyMapNode<string, string>(15);
+                    hash1.Add("0", "Paranoids");
+                    hash1.Add("1", "are");
+                    hash1.Add("2", "not");
+                    hash1.Add("3", "paranoid");
+                    hash1.Add("4", "because");
+                    hash1.Add("5", "they");
+                    hash1.Add("6", "are");
+                    hash1.Add("7", "paranoid");
+                    hash1.Add("8", "but");
+                    hash1.Add("9", "because");
+                    hash1.Add("10", "they");
+                    hash1.Add("11", "keep");
+                    hash1.Add("12", "putting");
+                    hash1.Add("13", "themselves");
+                    hash1.Add("14", "delibrately");
+                    hash1.Add("15", "into");
+                    string hash15 = hash1.Get("15");
+                    Console.WriteLine("15th index value: " + hash15);
+                    break;
+
+
             }
         }
     }

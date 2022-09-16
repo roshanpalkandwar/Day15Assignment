@@ -8,6 +8,7 @@ namespace Day15Assignment
 {
     internal class MyMapNode<K, V>
     {
+
         private readonly int size;
         private readonly LinkedList<KeyValue<K, V>>[] items;
 
@@ -59,7 +60,7 @@ namespace Day15Assignment
             KeyValue<K, V> item = new KeyValue<K, V>() { Key = key, Value = value };
             linkedList.AddLast(item);
 
-        }   
-        
+        }
+
     }
 }
