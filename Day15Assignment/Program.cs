@@ -5,7 +5,7 @@ namespace Day15Assignment
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("enter choice\n1.find ferquency of word\n2.find ferquency of phrase\n3.Remove word\n4.creat BST\n5.creat BST For Given");
+            Console.WriteLine("enter choice\n1.find ferquency of word\n2.find ferquency of phrase\n3.Remove word\n4.creat BST\n5.creat BST For Given\n6.search third binary tree");
             int opt =Convert.ToInt32 ( Console.ReadLine());
 
             switch(opt)
@@ -112,7 +112,27 @@ namespace Day15Assignment
                     binarySearch.GetSize();
 
                     break;
-                    
+
+                case 6:
+                    BinarySearchTree<int> binarySearch2 = new BinarySearchTree<int>(56);
+                    binarySearch2.Insert(30);
+                    binarySearch2.Insert(70);
+                    binarySearch2.Insert(22);
+                    binarySearch2.Insert(40);
+                    binarySearch2.Insert(60);
+                    binarySearch2.Insert(95);
+                    binarySearch2.Insert(11);
+                    binarySearch2.Insert(65);
+                    binarySearch2.Insert(3);
+                    binarySearch2.Insert(16);
+                    binarySearch2.Insert(63);
+                    binarySearch2.Insert(67);
+                    binarySearch2.Display();
+                    binarySearch2.GetSize();
+                    bool result = binarySearch2.IfExists(67, binarySearch2);
+                    Console.WriteLine(result);
+                    break;
+
 
 
 
