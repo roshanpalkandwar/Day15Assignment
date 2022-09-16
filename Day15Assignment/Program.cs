@@ -5,7 +5,7 @@ namespace Day15Assignment
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("enter choice\n1.find ferquency of word\n2.find ferquency of phrase");
+            Console.WriteLine("enter choice\n1.find ferquency of word\n2.find ferquency of phrase\n3.Remove word");
             int opt =Convert.ToInt32 ( Console.ReadLine());
 
             switch(opt)
@@ -48,12 +48,51 @@ namespace Day15Assignment
                     hash1.Add("13", "themselves");
                     hash1.Add("14", "delibrately");
                     hash1.Add("15", "into");
+                    hash1.Add("16", "paranoid");
+                    hash1.Add("17", "avoidable");
+                    hash1.Add("18", "situation");
                     string hash15 = hash1.Get("15");
                     Console.WriteLine("15th index value: " + hash15);
                     break;
+                case 3:
+
+                    MyMapNode<string, string> hashtable3 = new MyMapNode<string, string>(18);
+                    hashtable3.Add("0", "Paranoids");
+                    hashtable3.Add("1", "are");
+                    hashtable3.Add("2", "not");
+                    hashtable3.Add("3", "paranoid");
+                    hashtable3.Add("4", "because");
+                    hashtable3.Add("5", "they");
+                    hashtable3.Add("6", "are");
+                    hashtable3.Add("7", "paranoid");
+                    hashtable3.Add("8", "but");
+                    hashtable3.Add("9", "because");
+                    hashtable3.Add("10", "they");
+                    hashtable3.Add("11", "keep");
+                    hashtable3.Add("12", "putting");
+                    hashtable3.Add("13", "themselves");
+                    hashtable3.Add("14", "deliberately");
+                    hashtable3.Add("15", "into");
+                    hashtable3.Add("16", "paranoid");
+                    hashtable3.Add("17", "avoidable");
+                    hashtable3.Add("18", "situations");
+                    Console.WriteLine("enter the key to remove the value : ");
+                    string k = Console.ReadLine();
+                    hashtable3.Remove(k);
+                    Console.WriteLine("{0} index value is removed", k);
+                    break;
+                deafault:
+                    Console.WriteLine("Choose a appropriate option");
+                    break;
+
 
 
             }
+
+
+
+
+
         }
     }
 }
